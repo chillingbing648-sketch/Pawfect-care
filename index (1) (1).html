@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Pawfect Care</title>
+  <style>
+    .hero-heading {
+      text-align: center;
+      padding: 40px 20px;
+      background: linear-gradient(135deg, #ffecd2, #fcb69f);
+      border-radius: 6px;
+      font-family: 'Poppins', 'Segoe UI', sans-serif;
+    }
+
+    .hero-heading h1 {
+      font-size: 3rem;
+      color: #4a2c2a;
+      margin: 0;
+      letter-spacing: 1px;
+    }
+
+    .hero-heading span {
+      color: #e85d04;
+    }
+
+    .hero-heading p {
+      margin-top:10px;
+      font-size: 1.3rem;
+      color: #5f3c2c;
+      font-style: italic;
+    }
+  </style>
+  <div class="hero-heading">
+    <h1>Pawfect <span>Care</span> 🐾</h1>
+
+
+<style>
+/* =====================
+   GLOBAL STYLES
+   ===================== */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: #fffaf5;
+  color: #333;
+  scroll-behavior: smooth;
+}
+
+h1, h2 {
+  color: #ff6f61;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* =====================
+   NAVBAR
+   ===================== */
+nav {
+  background: #ffb6b9;
+  padding: 15px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+}
+
+nav h2 {
+  margin: 0;
+  color: white;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+nav ul li a {
+  color: white;
+  font-weight: bold;
+}
+
+/* =====================
+   HERO
+   ===================== */
+.hero {
+  text-align: center;
+  padding: 80px 20px;
+  background: linear-gradient(135deg, #ffdde1, #ee9ca7);
+}
+
+.hero h1 {
+  font-size: 40px;
+}
+
+.hero p {
+  font-size: 18px;
+}
+
+.hero button {
+  margin-top: 20px;
+  padding: 14px 28px;
+  font-size: 16px;
+  background: #ff6f61;
+  color: white;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+}
+
+/* =====================
+   SERVICES
+   ===================== */
+.services {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.service-box {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.card {
+  background: white;
+  width: 250px;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+}
+
+.card span {
+  font-size: 40px;
+}
+
+/* =====================
+   EMERGENCY
+   ===================== */
+.emergency {
+  background: #ffe0e0;
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.emergency a {
+  display: inline-block;
+  margin-top: 15px;
+  background: red;
+  color: white;
+  padding: 15px 25px;
+  border-radius: 10px;
+  font-size: 18px;
+}
+
+/* =====================
+   CONNECT
+   ===================== */
+.connect {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.connect button {
+  margin: 10px;
+  padding: 14px 24px;
+  border: none;
+  background: #ff6f61;
+  color: white;
+  font-size: 16px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+/* =====================
+   FOOTER
+   ===================== */
+footer {
+  background: #ffb6b9;
+  text-align: center;
+  padding: 15px;
+  color: white;
+}
+
+/* =====================
+   RESPONSIVE
+   ===================== */
+@media (max-width: 600px) {
+  .hero h1 {
+    font-size: 30px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav>
+  <h2></h2>
+  <ul>
+    <li><a href="#services">Services</a></li>
+    <li><a href="#emergency">Emergency</a></li>
+    <li><a href="#connect">Connect</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <h1>Because Every Paw Deserves Love ❤️</h1>
+  <p>Trusted care for your furry friends</p>
+  <button onclick="scrollToSection('services')">Our Services</button>
+</section>
+
+<!-- SERVICES -->
+<section id="services" class="services">
+  <h2>Our Services 🐶🐱</h2>
+  <div class="service-box">
+    <div class="card">
+      <span>🩺</span>
+      <h3>Vet Consultation</h3>
+      <p>Professional health checkups.</p>
+<button onclick="openLink('https://www.google.com/aclk?sa=L&pf=1&ai=DChsSEwjs84O43YaSAxVo8xYFHfpXK4sYACICCAEQDhoCdGw&co=1&ase=2&gclid=Cj0KCQiA1JLLBhCDARIsAAVfy7ize-8ROCAf6LvXJon8vNn5kkNs9ClkkURfgCUrs3hN--hLagb9UjkaAjljEALw_wcB&cid=CAAS9gHkaHLmnKmuK0fttaLXPD1YMAVq4VoaBfdTx4QZXuIzN6PJ6qUxB78e9j1soQEYdAlksOJ5S5Xv4RmW4pwVaufhiJeQTGjP6hR7HfnsVUXPLwfC0jtoOCTKNbzTMIQmI4nUCJVHjmMiieeXRM7zBVPWP4tjTB-GJ_p-xJqmSJynEXLb7mMpx_6aNd5mQoHklvVPzz0AcdH9wXaKLD-AfTTwoO0F4yxCJrJXtiNYXu21Iiixrxy1NaW7ZzX0NrDlBFUP2fS6F8QVuL9uQxfK1Q9ZIkBAlhgpN5sDCqJ5tKZe_33lFplHF8-HMS5IvLFsFywTNPYXX0g&cce=2&category=acrcp_v1_32&sig=AOD64_3wBze7bXngO1vo3uXwSpkPRpb8Yg&nis=4&ved=2ahUKEwiEjf633YaSAxUWUPUHHcmRAO0Q1Y4JegQIGRAc&adurl=https://vetic.in/mumbai/brand-new-v2%3Futm_source%3Dgoogle%26utm_medium%3Dcpc%26utm_campaign%3Dmumbai-vetic-brand-v2%26campaignid%3D20548442558%26adgroupid%3D155062863082%26targetid%3Dkwd-1731462886254%26matchtype%3De%26utm_term%3Dvetic%2520pet%2520clinic%26device%3Dc%26location%3D9198777%26gad_source%3D1%26gad_campaignid%3D20548442558%26gbraid%3D0AAAAAo2o-rwldEXNPlyoDA3vNnAhaLKL3%26gclid%3DCj0KCQiA1JLLBhCDARIsAAVfy7ize-8ROCAf6LvXJon8vNn5kkNs9ClkkURfgCUrs3hN--hLagb9UjkaAjljEALw_wcB')">Check Up</button>
+
+    </div>
+    <div class="card">
+      <span>🛁</span>
+      <h3>Pet Grooming</h3>
+      <p>Clean, cute & happy pets.</p>
+<button onclick="openLink('https://www.instagram.com/tidypawspetgrooming')">Grooming & Hygiene
+</button>
+
+    </div>
+    <div class="card">
+      <span>🏥</span>
+      <h3>Emergency Care</h3>
+      <p> 24/7 emergency support.</p>
+<button onclick="openLink('https://www.instagram.com/thehottestmowgli?igsh=N3N5dTFoYm9seTV6')"> Our Rescuers </button>
+
+    </div>
+    <div class="card">
+      <span>🐕</span>
+      <h3>Adoption</h3>
+      <p> Rescue & Rehabilitation .</p>
+<button onclick="openLink('https://animalrescueandshe.wixsite.com/abcd')">Let's Adopt </button>
+    </div>
+  </div>
+</section>
+
+<!-- EMERGENCY -->
+<section id="emergency" class="emergency">
+  <h2>🚨 Emergency Help</h2>
+  <p>If your pet needs immediate help, call now!</p>
+  <a href="tel:+9205614700">📞 Call Emergency Vet</a>
+  <p>(+91 9205614700 )</p>
+</section>
+
+<!-- CONNECT -->
+<section id="connect" class="connect">
+  <h2>Connect With Us 🐾</h2>
+  <button onclick="openLink('https://friendsofpaws.in/')">Visit NGO</button>
+  <button onclick="openLink('https://www.instagram.com/the.pawfectcare?igsh=aWpod29qNGNqY2Ft')">Instagram</button>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <p>© 2026 Pawfect Care | Made with ❤️ for Pets</p>
+</footer>
+
+<script>
+/* =====================
+   JAVASCRIPT
+   ===================== */
+function openLink(url) {
+  window.open(url, "_blank");
+}
+
+function scrollToSection(id) {
+  document.getElementById(id).scrollIntoView({ behavior: "smooth" });
+}
+</script>
+
+</body>
+</html>
