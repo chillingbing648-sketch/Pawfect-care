@@ -1,0 +1,348 @@
+/* support-theme.css */
+
+/* ==========================================================================
+   Variables & Theme Setup
+   ========================================================================== */
+:root {
+  --primary-color: #f47b59; /* Pawfect Care Logo Accent */
+  --text-dark: #1a1a1a;
+  --text-muted: #666666;
+  --bg-light: #fdfbf9;
+  --bg-white: #ffffff;
+  --footer-bg: #111111;
+  --border-color: #eaeaea;
+  --font-stack: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  
+  /* New variables for utility boxes to maintain a clean palette */
+  --info-bg: #eff6ff;
+  --info-border: #3b82f6;
+  --warning-bg: #fffbeb;
+  --warning-border: #f59e0b;
+  --note-bg: #f9fafb;
+  --note-border: #6b7280;
+}
+
+/* ==========================================================================
+   Global & Reset
+   ========================================================================== */
+html {
+  /* Enables smooth scrolling across the entire document */
+  scroll-behavior: smooth;
+}
+
+* { 
+  box-sizing: border-box; 
+  margin: 0; 
+  padding: 0; 
+  font-family: var(--font-stack); 
+}
+
+body { 
+  background-color: var(--bg-light); 
+  color: var(--text-dark); 
+  /* Improved global baseline readability */
+  line-height: 1.7; 
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ==========================================================================
+   Animations
+   ========================================================================== */
+@keyframes fadeAndSlideIn {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ==========================================================================
+   Navigation Top Bar
+   ========================================================================== */
+.nav-header { 
+  padding: 20px 5%; 
+  background: rgba(255, 255, 255, 0.95); 
+  border-bottom: 1px solid var(--border-color); 
+  display: flex; 
+  justify-content: space-between; 
+  align-items: center; 
+  /* Sticky navigation behavior with subtle glassmorphism */
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  backdrop-filter: blur(8px);
+  box-shadow: 0 2px 15px rgba(0,0,0,0.02);
+}
+
+.nav-header a { 
+  text-decoration: none; 
+  color: var(--text-dark); 
+  font-weight: 500; 
+  position: relative;
+  transition: color 0.3s ease; 
+  margin-left: 20px; /* Improved spacing between links */
+}
+
+.nav-header a:hover { 
+  color: var(--primary-color); 
+}
+
+/* Hover underline animation for navigation links */
+.nav-header a:not(.brand-logo)::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -4px;
+  left: 0;
+  background-color: var(--primary-color);
+  transition: width 0.3s ease;
+  border-radius: 2px;
+}
+
+.nav-header a:not(.brand-logo):hover::after {
+  width: 100%;
+}
+
+.brand-logo { 
+  font-size: 1.5rem; 
+  font-weight: 800; /* Increased weight for emphasis */
+  letter-spacing: -0.5px;
+  margin-left: 0; /* Reset margin for logo */
+}
+
+.brand-logo span { 
+  color: var(--primary-color); 
+}
+
+/* ==========================================================================
+   Main Container for Legal Docs
+   ========================================================================== */
+.document-container { 
+  max-width: 800px; 
+  margin: 60px auto; 
+  padding: 50px 60px; /* Improved padding for visual breathing room */
+  background: var(--bg-white); 
+  border-radius: 12px; 
+  /* Deeper soft shadow and subtle border */
+  border: 1px solid var(--border-color);
+  box-shadow: 0 10px 40px rgba(0,0,0,0.04); 
+  /* Smooth fade-in page animation */
+  animation: fadeAndSlideIn 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  /* Subtle card elevation for container */
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.document-container:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 15px 45px rgba(0,0,0,0.06);
+}
+
+.document-header { 
+  border-bottom: 1px solid var(--border-color); 
+  padding-bottom: 25px; 
+  margin-bottom: 35px; 
+}
+
+.document-header h1 { 
+  font-size: 2.5rem; 
+  font-weight: 800;
+  letter-spacing: -0.5px;
+  margin-bottom: 15px; 
+  position: relative;
+}
+
+/* Decorative accent line under main heading */
+.document-header h1::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 4px;
+  background-color: var(--primary-color);
+  border-radius: 2px;
+  margin-top: 15px;
+}
+
+.last-updated { 
+  color: var(--text-muted); 
+  font-size: 0.95rem; 
+  font-weight: 500;
+}
+
+/* ==========================================================================
+   Content Styling & Typography
+   ========================================================================== */
+.document-content h2 { 
+  margin: 45px 0 20px 0; /* Better vertical rhythm */
+  font-size: 1.6rem; 
+  font-weight: 700;
+  color: var(--text-dark);
+  letter-spacing: -0.3px;
+}
+
+.document-content p { 
+  margin-bottom: 20px; 
+  color: #333333; /* Improved contrast from #444 */
+  font-size: 1.05rem;
+  max-width: 75ch; /* Optimal line length for reading */
+}
+
+/* Improved list formatting */
+.document-content ul, 
+.document-content ol { 
+  margin-left: 0; 
+  padding-left: 1.8rem;
+  margin-bottom: 25px; 
+  color: #333333; 
+  font-size: 1.05rem;
+}
+
+.document-content li {
+  margin-bottom: 10px;
+  padding-left: 5px;
+}
+
+.document-content li::marker {
+  color: var(--primary-color);
+}
+
+.document-content a {
+  color: var(--primary-color);
+  text-decoration: none;
+  font-weight: 500;
+  transition: opacity 0.2s ease;
+}
+
+.document-content a:hover {
+  text-decoration: underline;
+  opacity: 0.8;
+}
+
+/* ==========================================================================
+   Reusable Support Components (Utility Classes)
+   ========================================================================== */
+.info-box, 
+.warning-box, 
+.note-box, 
+.highlight-section {
+  padding: 18px 24px;
+  margin: 25px 0;
+  border-radius: 8px;
+  border-left: 4px solid;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.info-box {
+  background-color: var(--info-bg);
+  border-left-color: var(--info-border);
+  color: #1e3a8a; /* Dark blue text for contrast */
+}
+
+.warning-box {
+  background-color: var(--warning-bg);
+  border-left-color: var(--warning-border);
+  color: #78350f; /* Dark amber text for contrast */
+}
+
+.note-box {
+  background-color: var(--note-bg);
+  border-left-color: var(--note-border);
+  color: #374151; /* Dark gray text for contrast */
+}
+
+.highlight-section {
+  background-color: rgba(244, 123, 89, 0.05); /* 5% opacity of primary */
+  border-left-color: var(--primary-color);
+  color: var(--text-dark);
+}
+
+/* Remove bottom margin from last paragraph inside boxes */
+.info-box p:last-child, 
+.warning-box p:last-child, 
+.note-box p:last-child, 
+.highlight-section p:last-child {
+  margin-bottom: 0;
+}
+
+/* ==========================================================================
+   Footer
+   ========================================================================== */
+.site-footer { 
+  background: var(--footer-bg); 
+  color: #ffffff; 
+  padding: 60px 5%; 
+  margin-top: 100px; 
+  text-align: center; 
+}
+
+/* ==========================================================================
+   Responsive Design
+   ========================================================================== */
+
+/* Tablet Optimization */
+@media screen and (max-width: 850px) {
+  .document-container {
+    margin: 40px 5%; /* Switch to percentage margins for fluid fit */
+    padding: 40px;
+  }
+  
+  .document-header h1 {
+    font-size: 2.2rem;
+  }
+}
+
+/* Mobile Optimization */
+@media screen and (max-width: 600px) {
+  .nav-header {
+    flex-direction: column;
+    padding: 15px 5%;
+    gap: 15px; /* Spacing between logo and links on stacked layout */
+  }
+  
+  .nav-header a {
+    margin-left: 10px;
+    margin-right: 10px;
+    font-size: 0.95rem;
+  }
+  
+  .document-container {
+    /* Full-width container on mobile */
+    margin: 0; 
+    max-width: 100%;
+    padding: 30px 20px;
+    border-radius: 0; 
+    border-left: none;
+    border-right: none;
+    box-shadow: none; 
+  }
+  
+  .document-container:hover {
+    transform: none; /* Disable hover elevation on touch devices */
+  }
+
+  .document-header h1 {
+    font-size: 1.8rem;
+  }
+
+  .document-content h2 {
+    font-size: 1.4rem;
+    margin-top: 35px;
+  }
+
+  .document-content p, 
+  .document-content ul, 
+  .document-content ol {
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+  
+  .site-footer {
+    margin-top: 60px;
+    padding: 40px 5%;
+  }
+}
